@@ -11,27 +11,32 @@
     cursor: not-allowed;
   }
 
-.recipe_container {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  border: 2px dotted red;
-  align-items: center;
-  margin: 0 auto;
-  gap: 10px;
-}
+  .recipe_container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+  }
 
-#recipes {
+  #recipes {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px;
+  }
+
+.dom-recipe-class {
   display: flex;
-  width: 80%;
+  margin-bottom: 10px;
+  width: 100%;
   border: 2px solid black;
-  padding: 20px;
 }
 
 .recipe-display {
-  margin: 0 auto 10px auto;
-  padding: 10px 20px;
-  border: 1px dotted pink;
+  padding: 0 20px;
+  width: 30%;
 }
 
 .remove-btn {
@@ -40,5 +45,5 @@
 }
 
 .recipe-desc {
-  border: 3px solid black;
+  width: 70%;
 }
