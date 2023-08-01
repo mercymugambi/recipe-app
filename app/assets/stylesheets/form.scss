@@ -1,45 +1,43 @@
 
 .form {
+  max-width: 40rem;
+  margin: 0 auto;
+
+  &_title {
     max-width: 40rem;
-    margin: 0 auto;
-  
-    &_title {
-      max-width: 40rem;
-      margin: 0 auto 1rem;
-      font-size: 1.5rem;
-      font-weight: 500;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .field {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
     }
-  
-    .field {
-      &:not(:last-child) {
-        margin-bottom: 1rem;
-      }
-  
-      em {
-        display: block;
-        margin: 0.25rem 0;
-        font-size: 0.85rem;
-      }
-  
-      input[type='text'],
-      input[type='number'],
-      input[type='email'],
-      input[type='password'],
-      textarea,
-      select {
-        width: 100%;
-        padding: 0.5rem;
-        font-family: inherit;
-        border-radius: 0.25rem;
-        border: solid 1px var(--grey);
-        background-color: var(--very-light-grey);
-      }
-  
-      textarea {
-        resize: none;
-        height: 8rem;
-      }
+
+    em {
+      display: block;
+      margin: 0.25rem 0;
+      font-size: 0.85rem;
     }
-  
+
+    input[type='text'],
+    input[type='number'],
+    input[type='email'],
+    input[type='password'],
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      font-family: inherit;
+      border-radius: 0.25rem;
+      border: solid 1px var(--grey);
+      background-color: var(--very-light-grey);
+    }
+
+    textarea {
+      resize: none;
+      height: 8rem;
+    }
+  }
 }
-  
