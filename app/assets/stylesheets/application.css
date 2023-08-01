@@ -16,18 +16,18 @@
   width: 80%;
   align-items: center;
   margin: 0 auto;
-  gap: 10px;
 }
 
 #recipes {
   width: 80%;
-  border: 2px solid black;
 }
 
 .dom-recipe-class {
   display: flex;
   width: 100%;
-  margin: auto;
+  margin: 10px auto;
+  gap: 10px;
+  border: 2px solid black;
 }
 
 .recipe-display {
