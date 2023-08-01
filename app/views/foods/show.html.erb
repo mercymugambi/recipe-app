@@ -1,10 +1,37 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @food %>
+<h1 class='title'>Food details</h1>
+<%= render 'shared/button', btnName: 'Back to foods', btnClass: 'btn btn_cta btn_cta_new btn_cta_new_right', btnPath: foods_path %>
 
 <div>
-  <%= link_to "Edit this food", edit_food_path(@food) %> |
-  <%= link_to "Back to foods", foods_path %>
 
-  <%= button_to "Destroy this food", @food, method: :delete %>
+<table class="the_table">
+<tr>
+  <th>Key</th>
+  <th>Value</th>
+</tr>
+<tr>
+  <td><b>Food Name:</b></th>
+  <td><%= @food.name %></td>
+</tr>
+<tr>
+  <td><b>Food unit:</b></th>
+  <td><%= @food.measurement_unit %></td>
+</tr>
+<tr>
+  <td><b>Food Price:</b></th>
+  <td><%= @food.price %></td>
+</tr>
+<tr>
+  <td><b>Food Quantity:</b></th>
+  <td><%= @food.quantity %></td>
+</tr>
+<tr>
+  <td><b>Food Edit:</b></th>
+  <td><%= link_to "Edit this food", edit_food_path(@food) %></td>
+</tr>
+<tr>
+  <td><b>Food Delete:</b></th>
+  <td><%= button_to "Destroy this food", @food, method: :delete %></td>
+</tr>
+</table>
 </div>
