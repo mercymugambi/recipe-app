@@ -1,11 +1,10 @@
-<h1>Recipes</h1>
+<div class = "recipe_container">
+<h1 class = "recipe-title">Recipes</h1>
 <button> <%= link_to "New recipe", new_recipe_path %> </button>
 
 <div id="recipes">
   <% @recipes.each do |recipe| %>
     <%= render recipe %>
-    <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
   <% end %>
+</div>
 </div>
