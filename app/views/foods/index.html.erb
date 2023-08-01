@@ -1,11 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Foods</h1>
+<%= render 'shared/button', btnName: 'New food', btnClass: 'btn btn_cta btn_cta_new btn_cta_new_right', btnPath: new_food_path %>
 
 <div id="foods">
   <table class="the_table">
       <tr>
-        <th>No.</th>
+        <th>ID.</th>
         <th>Name</th>
         <th>Unit</th>
         <th>Price</th>
@@ -28,5 +29,3 @@
     <% end %>
   </table>
 </div>
-
-<%= link_to "New food", new_food_path %>
