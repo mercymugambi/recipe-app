@@ -3,3 +3,10 @@
 *= require popups
 *= require navbar
 */
+
+/* application.css */
+.disabled-text-field {
+    background-color: #f2f2f2;
+    color: #888;
+    cursor: not-allowed;
+  }  

@@ -17,17 +17,16 @@ class RecipesController < ApplicationController
   # GET /recipes/1/edit
   def edit; end
 
-  # POST /recipes or /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
 
     respond_to do |format|
       if @recipe.save
         format.html { redirect_to recipe_url(@recipe), notice: 'Recipe was successfully created.' }
-        format.json { render :show, status: :created, location: @recipe }
+        # Remove the format.json block to remove JSON response
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @recipe.errors, status: :unprocessable_entity }
+        # Remove the format.json block to remove JSON response
       end
     end
   end

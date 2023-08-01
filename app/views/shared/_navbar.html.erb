@@ -3,9 +3,6 @@
   
     <%= link_to "Recipe App", root_path, class: "nav_logo" %>
   
-  
-  
-  
     <ul class="nav_links">
   
       <% if user_signed_in? %>
@@ -16,18 +13,13 @@
   
         </li>
   
-  
-  
-  
         <li class="nav_links_item">
+
   
-          <%= link_to "Recipes ", class: "nav_link link_signed" %>
+          <%= link_to "Recipes ", recipes_path, class: "nav_link link_signed" %>
   
         </li>
-  
-  
-  
-  
+
         <li class="nav_links_item">
   
           <%= link_to "Shopping ", class: "nav_link link_signed" %>
@@ -41,21 +33,13 @@
         </li>
   
   
-  
-  
         <li class="nav_split"></li>
-  
-  
-  
   
         <li class="nav_item">
   
           <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete, confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, class: "nav_link" %>
   
         </li>
-  
-  
-  
   
         <li class="nav_item"> 
   
