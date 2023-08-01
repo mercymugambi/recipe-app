@@ -14,7 +14,6 @@
   display: flex;
   flex-direction: column;
   width: 80%;
-  border: 2px dotted red;
   align-items: center;
   margin: 0 auto;
   gap: 10px;
@@ -23,21 +22,17 @@
 #recipes {
   width: 80%;
   border: 2px solid black;
-  padding: 20px;
 }
 
 .dom-recipe-class {
   display: flex;
   width: 100%;
   margin: auto;
-  border: 2px solid green;
 }
 
 .recipe-display {
-  /* margin: 0 auto 10px auto; */
   width: 30%;
-  padding: 10px 20px;
-  border: 1px dotted pink;
+  padding: 0 20px;
 }
 
 .remove-btn {
@@ -46,6 +41,5 @@
 }
 
 .recipe-desc {
-  border: 3px solid black;
   width: 70%;
 }/*# sourceMappingURL=application.css.map */
