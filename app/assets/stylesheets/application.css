@@ -3,6 +3,7 @@
 *= require popups
 *= require navbar
 */
+
 /* application.css */
 .disabled-text-field {
   background-color: #f2f2f2;
@@ -50,7 +51,6 @@
 .dom-recipe-class2 {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
   justify-content: center;
   margin: auto;
   width: 80%;
@@ -129,4 +129,4 @@
 
 .other-links {
   margin-left: 10%;
-}/*# sourceMappingURL=application.css.map */
+}

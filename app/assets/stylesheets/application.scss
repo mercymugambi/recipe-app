@@ -5,27 +5,28 @@
 */
 
 /* application.css */
+
 .disabled-text-field {
-    background-color: #f2f2f2;
-    color: #888;
-    cursor: not-allowed;
-  }
+  background-color: #f2f2f2;
+  color: #888;
+  cursor: not-allowed;
+}
 
-  .recipe_container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    align-items: center;
-    margin: 0 auto;
-    gap: 10px;
-  }
+.recipe_container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+  gap: 10px;
+}
 
-  #recipes {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    padding: 20px;
-  }
+#recipes {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 20px;
+}
 
 .dom-recipe-class {
   display: flex;
@@ -51,7 +52,6 @@
 .dom-recipe-class2 {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
   justify-content: center;
   margin: auto;
   width: 80%;
@@ -78,7 +78,7 @@
 
 /* Styles for the public label */
 .public-label {
-  display: flex; 
+  display: flex;
   align-items: center;
 }
 
@@ -105,7 +105,7 @@
 /* For false values */
 .public-false {
   background-color: white;
-  color: black; 
+  color: black;
 }
 
 /* Styles for the white slider */

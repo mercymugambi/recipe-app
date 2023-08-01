@@ -7,8 +7,8 @@ class RecipesController < ApplicationController
   end
 
   # GET /recipes/1 or /recipes/1.json
-  def show; 
-  @recipeShow = Recipe.find(params[:id])
+  def show
+    @recipeshow = Recipe.find(params[:id])
   end
 
   # GET /recipes/new
@@ -50,7 +50,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    redirect_to recipes_path, notice: "Recipe was successfully deleted."
+    redirect_to recipes_path, notice: 'Recipe was successfully deleted.'
   end
 
 
