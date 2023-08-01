@@ -125,4 +125,8 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0 90px 0 10px;
+}
+
+.other-links {
+  margin-left: 10%;
 }/*# sourceMappingURL=application.css.map */
