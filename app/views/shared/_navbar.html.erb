@@ -10,33 +10,33 @@
   
       <% if user_signed_in? %>
   
-        <li class="nav_item">
+        <li class="nav_links_item">
   
-          <%= link_to "Food list", class: "nav_link" %>
-  
-        </li>
-  
-  
-  
-  
-        <li class="nav_item">
-  
-          <%= link_to "Recipes list", class: "nav_link" %>
+          <%= link_to "Food ", class: "nav_link link_signed" %>
   
         </li>
   
   
   
   
-        <li class="nav_item">
+        <li class="nav_links_item">
   
-          <%= link_to "Shopping list", class: "nav_link" %>
+          <%= link_to "Recipes ", class: "nav_link link_signed" %>
+  
+        </li>
+  
+  
+  
+  
+        <li class="nav_links_item">
+  
+          <%= link_to "Shopping ", class: "nav_link link_signed" %>
   
         </li>
 
-        <li class="nav_item">
+        <li class="nav_links_item">
   
-          <%= link_to "Public recipes", class: "nav_link" %>
+          <%= link_to "Public ", class: "nav_link link_signed" %>
   
         </li>
   
@@ -68,9 +68,9 @@
   
         <li class="nav_item">
   
-  
+        <div class="nav_profile">
             <%= image_tag("https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png", :alt => current_user.name, class: "nav_photo") %>
-  
+        </div>
   
         </li>
   
