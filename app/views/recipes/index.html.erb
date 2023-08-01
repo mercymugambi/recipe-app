@@ -3,8 +3,9 @@
 <button> <%= link_to "Add recipe", new_recipe_path %> </button>
 
 <div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-  <% end %>
-</div>
-</div>
+    <% @recipes.each do |recipe| %>
+      <%= link_to recipe_path(recipe) do %>
+        <%= render partial: 'recipe', locals: { recipe: recipe } %>
+      <% end %>
+    <% end %>
+  </div>

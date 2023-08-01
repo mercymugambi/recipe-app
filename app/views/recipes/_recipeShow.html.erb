@@ -1,10 +1,22 @@
 <div id="<%= dom_id recipe %>" class="dom-recipe-class">
-<div class = "recipe-display">
+
   <p>
     <strong><%= recipe.name %></strong>
   </p>
-  <strong> <%= link_to "REMOVE", @recipe, method: :delete, class: "remove-btn"%> </strong>
-</div>
+
+  <div class = "show-display">
+    <div class = "recipe-time">
+      <%= recipe.preparation_time %>
+      <%= recipe.cooking_time %>
+      <h2>Steps go here...</h2>
+    </div>
+    <div class="public-label">
+   <h2 class = "public"><strong>Public:</strong> </h2>
+  <p class="public-button <%= @recipe.public ? 'public-true' : 'public-false' %>"></p>
+  </div>
+
+  </div>
+
 <div class = "recipe-desc">
   <p>
     <strong>Description:</strong>
