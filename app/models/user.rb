@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable
 
-  has_many :foods
-  has_many :recipes
+          has_many :foods, foreign_key: 'user_id_id'
+          has_many :recipes, foreign_key: 'user_id_id'
+        
 end
