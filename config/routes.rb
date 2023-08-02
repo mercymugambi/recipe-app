@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :home, only: [:index]
-  resources :recipes 
+  resources :public_recipes 
 
 end
