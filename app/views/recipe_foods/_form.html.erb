@@ -1,32 +1,17 @@
-<%= form_with(model: recipe_food) do |form| %>
-  <% if recipe_food.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(recipe_food.errors.count, "error") %> prohibited this recipe_food from being saved:</h2>
-
-      <ul>
-        <% recipe_food.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div>
-    <%= form.label :quantity, style: "display: block" %>
-    <%= form.number_field :quantity %>
+<%= form_with( url: "/recipe_foods/#{recipe_food.recipe_id}", method: :post) do |form| %>
+  <div class='mt-4'>
+    <%= form.label :food_id, style: "display: block", class:'font-semibold text-xl mb-4' %>
+    <span class="border px-2 py-2">
+      <%= form.collection_select :food_id, Food.where(user_id_id: current_user.id).order(:food), :id, :food %>
+    </span>
+  </div>
+  
+  <div class='mt-4'>
+    <%= form.label :quantity, style: "display: block", class:'font-semibold text-xl' %>
+    <%= form.number_field :quantity, class:'border px-2 py-1 rounded-md mt-2' %>
   </div>
 
-  <div>
-    <%= form.label :recipe_id_id, style: "display: block" %>
-    <%= form.text_field :recipe_id_id %>
-  </div>
-
-  <div>
-    <%= form.label :food_id_id, style: "display: block" %>
-    <%= form.text_field :food_id_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class='mt-4'>
+    <%= form.submit 'Add Ingredient', class:'border px-2 py-1 rounded bg-green-400 hover:bg-green-200 w-fit font-medium text-white hover:text-green-800 cursor-pointer'%>
   </div>
 <% end %>
