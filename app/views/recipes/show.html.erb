@@ -7,6 +7,7 @@
       <th>Food</th>
       <th>Quantity</th>
       <th>Value</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +16,10 @@
         <td><%= recipe_food.food.name %></td>
         <td><%= recipe_food.quantity %></td>
         <td><%= recipe_food.value %></td>
+        <td>
+        <%= link_to "Modify", edit_recipe_food_path(@recipe_food) %>
+        <%= link_to "Remove", recipe_food_path(@recipe_food), method: :delete %>
+      </td>
       </tr>
     <% end %>
   </tbody>

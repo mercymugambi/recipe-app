@@ -1,6 +1,6 @@
-# app/controllers/recipe_foods_controller.rb
 class RecipeFoodsController < ApplicationController
-  before_action :set_recipe
+  before_action :set_recipe, except: [:new, :create]
+  before_action :set_recipe_food, only: [:edit, :update, :destroy]
 
   def new
     @recipe_food = @recipe.recipe_foods.new
@@ -17,10 +17,32 @@ class RecipeFoodsController < ApplicationController
     end
   end
 
+  def edit
+    @foods = current_user.foods
+  end
+
+  def update
+    if @recipe_food.update(recipe_food_params)
+      redirect_to @recipe, notice: 'Recipe Food was successfully updated.'
+    else
+      @foods = current_user.foods
+      render :edit
+    end
+  end
+
+  def destroy
+    @recipe_food.destroy
+    redirect_to @recipe, notice: 'Recipe Food was successfully destroyed.'
+  end
+
   private
 
   def set_recipe
-    @recipe = Recipe.find(params[:recipe_id])
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def set_recipe_food
+    @recipe_food = @recipe.recipe_foods.find(params[:id])
   end
 
   def recipe_food_params
