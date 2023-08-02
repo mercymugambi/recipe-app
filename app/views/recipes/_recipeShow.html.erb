@@ -16,9 +16,7 @@
       
     <div class="show-buttons">
       <button>Generate Shopping List</button>
-      <%=form_with model: RecipeFood.new, url: new_recipe_recipe_food_path(@recipe), method: :get do %>
-        <button>Add Ingredient</button>
-      <%end%>
+      <button><%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe) %></button>
     </div>
       
 </div>
