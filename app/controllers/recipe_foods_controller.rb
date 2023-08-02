@@ -1,6 +1,6 @@
 class RecipeFoodsController < ApplicationController
-  before_action :set_recipe, except: [:new, :create]
-  before_action :set_recipe_food, only: [:edit, :update, :destroy]
+  before_action :set_recipe, except: %i[new create]
+  before_action :set_recipe_food, only: %i[edit update destroy]
 
   def new
     @recipe = Recipe.find(params[:recipe_id])
