@@ -1,7 +1,4 @@
-<div class='flex justify-between'>
-  <%= link_to "Back", url_for(:back), class:'border rounded bg-neutral-200 px-2 py-1 hover:bg-neutral-400 my-6' %>
-</div>
-
-<h2 class='text-4xl font-semibold font-serif text-center'>New Ingredient</h2>
-
-<%= render "form", recipe_food: @recipe_food, foods: @foods%>
+<!-- app/views/recipe_foods/new.html.erb -->
+<h2>Add Recipe Food</h2>
+<%= render 'form' %>
+<%= link_to 'Back to Recipe', @recipe %>

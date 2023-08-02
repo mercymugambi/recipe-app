@@ -20,10 +20,10 @@ class RecipeFoodsController < ApplicationController
   private
 
   def set_recipe
-    @recipe = Recipe.find(params[:recipe_id])
+    @recipe = Recipe.find(params[:recipe_id_id])
   end
 
   def recipe_food_params
-    params.require(:recipe_food).permit(:food_id, :quantity)
+    params.require(:recipe_food).permit(:food_id_id, :quantity)
   end
 end
