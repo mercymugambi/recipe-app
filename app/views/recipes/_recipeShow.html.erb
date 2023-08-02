@@ -9,9 +9,11 @@
       <p>Steps go here...</p>
     </div>
     <div class="public-label">
-      <h2 class = "public"><strong>Public:</strong> </h2>
-      <p class="public-button <%= @recipe.public ? 'public-true' : 'public-false' %>"></p>
+      <%= render "checkbox", recipe: recipe %>
     </div>
+    <div>
+    
+    
   </div>
   <div class = "show-buttons">
     <button>Generate Shopping List</button>
