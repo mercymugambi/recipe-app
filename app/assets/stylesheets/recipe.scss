@@ -56,7 +56,6 @@
 .show-display {
   width: 90%;
   display: flex;
-  margin-top: 50px;
   align-items: center;
   justify-content: space-between;
 }
@@ -74,6 +73,16 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0 90px 0 10px;
+}
+
+.public-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.public {
+  margin-right: 5px;
 }
 
 .other-links {
