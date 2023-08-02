@@ -1,4 +1,4 @@
-<%= form_with(model: recipe, url: recipe_path(recipe), method: :patch, data: { remote: true }) do |form| %>
+<%= form_with(model: recipe, url: recipe_path(recipe), method: :patch, local: true) do |form| %>
   <% if recipe.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe change public:</h2>
@@ -12,11 +12,7 @@
   <% end %>
 
   <div>
-    <%= form.label :public, style: "display: block" %>
     <%= form.check_box :public, onchange: "this.form.submit()" %>
   </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>
