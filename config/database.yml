@@ -23,6 +23,7 @@ development:
   username: postgres #test
   password: ?Shanice123 #test123
 
+
 test:
   adapter: postgresql
   encoding: unicode
@@ -30,6 +31,7 @@ test:
   pool: 5
   username: postgres #test
   password: ?Shanice123 #test123
+
 
 production:
   adapter: postgresql

@@ -1,9 +1,4 @@
-<h1>New food</h1>
+<h1 class='title'>New Food</h1>
+<%= render 'shared/button', btnName: 'Back to foods', btnClass: 'btn btn_cta btn_cta_new btn_cta_new_right', btnPath: foods_path %>
 
 <%= render "form", food: @food %>
-
-<br>
-
-<div>
-  <%= link_to "Back to foods", foods_path %>
-</div>

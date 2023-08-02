@@ -20,14 +20,13 @@ class FoodsController < ApplicationController
   # POST /foods or /foods.json
   def create
     @food = Food.new(food_params)
+    @food.user = current_user
 
     respond_to do |format|
       if @food.save
         format.html { redirect_to food_url(@food), notice: 'Food was successfully created.' }
-        format.json { render :show, status: :created, location: @food }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @food.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -37,10 +36,8 @@ class FoodsController < ApplicationController
     respond_to do |format|
       if @food.update(food_params)
         format.html { redirect_to food_url(@food), notice: 'Food was successfully updated.' }
-        format.json { render :show, status: :ok, location: @food }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @food.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -51,7 +48,6 @@ class FoodsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to foods_url, notice: 'Food was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
