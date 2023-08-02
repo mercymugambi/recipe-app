@@ -4,8 +4,10 @@
 
 <div id="recipes">
     <% @recipes.each do |recipe| %>
+      <% if recipe.user_id_id == current_user.id %>
       <%= link_to recipe_path(recipe) do %>
         <%= render partial: 'recipe', locals: { recipe: recipe } %>
+      <% end %>
       <% end %>
     <% end %>
   </div>
