@@ -37,8 +37,8 @@
   </div>
 
   <div>
-    <%= form.label :user_id_id, style: "display: block" %>
-    <%= form.text_field :user_id_id %>
+  <%= form.label :user_id_id, style: "display: block" %>
+  <%= form.text_field :user_id_id, value: current_user.id, readonly: true, class: 'disabled-text-field' %>
   </div>
 
   <div>
