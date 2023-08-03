@@ -21,9 +21,13 @@
   padding: 20px;
 }
 
+.dom-recipe-container {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
 .dom-recipe-class {
   display: flex;
-  margin-bottom: 10px;
   width: 100%;
   border: 2px solid black;
 }
@@ -56,7 +60,6 @@
 .show-display {
   width: 90%;
   display: flex;
-  margin-top: 50px;
   align-items: center;
   justify-content: space-between;
 }
@@ -69,51 +72,6 @@
   padding-left: 10px;
 }
 
-/* Styles for the public label */
-.public-label {
-  display: flex;
-  align-items: center;
-}
-
-.public {
-  padding-right: 10px;
-}
-
-/* Styles for the oval button */
-.public-button {
-  display: inline-block;
-  padding: 5px 15px;
-  height: 20px;
-  border-radius: 40px;
-  font-weight: bold;
-  position: relative;
-}
-
-/* For true values */
-.public-true {
-  background-color: green;
-  color: white;
-}
-
-/* For false values */
-.public-false {
-  background-color: white;
-  color: black;
-}
-
-/* Styles for the white slider */
-.public-button.public-true::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(-50%, -50%);
-  width: 15px; /* Adjust the width of the slider */
-  height: 15px; /* Adjust the height of the slider */
-  background-color: white;
-  border-radius: 50%; /* This creates a circle for the slider */
-}
-
 .show-buttons {
   display: flex;
   flex-direction: row;
@@ -121,6 +79,35 @@
   margin: 0 90px 0 10px;
 }
 
+.public-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.public {
+  margin-right: 5px;
+}
+
 .other-links {
   margin-left: 10%;
+}
+
+.recipe-table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 10px auto 0 auto;
+}
+
+.recipe-table th,
+.recipe-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style for the blue background header */
+.recipe-table .blue-bg {
+  background-color: blue;
+  color: white;
 }
