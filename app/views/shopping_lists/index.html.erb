@@ -1,8 +1,7 @@
 
-<h1 class='title'>Foods</h1>
-<%= render 'shared/button', btnName: 'New food', btnClass: 'btn btn_cta btn_cta_new btn_cta_new_right', btnPath: new_food_path %>
-<p>Amount of food to buy: <%= @shoppings.length %></p>
-<p>Total value of food needed: <%= @shoppings.map { |hash| hash[:price] }.sum %></p>
+<h1 class='title'>Shopping Lists</h1>
+<p class='text_center'>Amount of food to buy: <%= @shoppings.length %></p>
+<p class='text_center'>Total value of food needed: <%= @shoppings.map { |hash| hash[:price] }.sum %></p>
 <div id="foods">
   <table class="the_table">
       <tr>
