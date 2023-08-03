@@ -5,7 +5,6 @@
 <div id="foods">
   <table class="the_table">
       <tr>
-        <th>ID.</th>
         <th>Name</th>
         <th>Unit</th>
         <th>Price</th>
@@ -18,7 +17,6 @@
       <% if food.user_id_id == current_user.id %>
       
         <tr>
-          <td><%= food.id %></th>
           <td><%= food.name %></td>
           <td><%= food.measurement_unit %></td>
           <td>$<%= food.price %></td>
