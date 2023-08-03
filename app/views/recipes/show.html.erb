@@ -1,10 +1,29 @@
-<p style="color: green"><%= notice %></p>
+<%= render partial: 'recipeshow', locals: { recipe: @recipe } %>
 
-<%= render partial: 'recipeShow', locals: { recipe: @recipe } %>
+<!-- Table of recipe foods -->
+<table class="recipe-table">
+  <thead>
+    <tr class = "blue-bg">
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recipe.recipe_foods.each do |recipe_food| %>
+      <tr>
+        <td><%= recipe_food.food.name %></td>
+        <td><%= recipe_food.quantity %></td>
+        <td><%= recipe_food.value %></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <div class = "other-links">
   <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
   <%= link_to "Back to recipes", recipes_path %>
-
   <%= button_to "Destroy this recipe", @recipe, method: :delete %>
 </div>
