@@ -5,11 +5,18 @@
       <p>
         <strong><%= recipe.name %></strong>
       </p>
+      <p>
+      <strong>By:</strong><%= recipe.user.email %>
+      </p>
     </div>
     <div class="recipe-desc">
       <p>
-        <strong>Description:</strong>
-        <%= recipe.description %>
+        <strong>Total food item:</strong>
+        <%= recipe.recipe_foods.length %>
+      </p>
+      <p>
+        <strong>Total price:</strong>
+        <%= recipe.recipe_foods.sum(:food_id_id) %>
       </p>
     </div>
   </div>
