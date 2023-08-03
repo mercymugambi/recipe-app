@@ -16,7 +16,7 @@
       </p>
       <p>
         <strong>Total price:</strong>
-        <%= recipe.recipe_foods.sum(:food_id_id) %>
+        <%= recipe.recipe_foods.sum(:value) %>
       </p>
     </div>
   </div>
