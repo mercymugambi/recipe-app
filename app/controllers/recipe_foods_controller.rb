@@ -11,6 +11,7 @@ class RecipeFoodsController < ApplicationController
   def create
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = @recipe.recipe_foods.new(recipe_food_params)
+    @recipe_food.value = @recipe_food.quantity * @recipe_food.food.price
     if @recipe_food.save
       redirect_to @recipe, notice: 'Recipe Food was successfully added.'
     else
@@ -48,6 +49,6 @@ class RecipeFoodsController < ApplicationController
   end
 
   def recipe_food_params
-    params.require(:recipe_food).permit(:food_id_id, :quantity)
+    params.require(:recipe_food).permit(:food_id_id, :quantity, :value)
   end
 end
