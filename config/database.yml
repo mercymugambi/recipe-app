@@ -20,8 +20,8 @@ development:
   encoding: unicode
   database: recipe_app_development
   pool: 5
-  username: test
-  password: test123
+  username: postgres #test
+  password: ?Shanice123 #test123
 
 
 test:
@@ -29,8 +29,8 @@ test:
   encoding: unicode
   database: recipe_app_testing
   pool: 5
-  username: test
-  password: test123
+  username: postgres #test
+  password: ?Shanice123 #test123
 
 
 production:
