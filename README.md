@@ -112,10 +112,6 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- Coming Soon...
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- WalkThrough Video -->
