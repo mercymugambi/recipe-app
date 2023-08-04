@@ -13,15 +13,12 @@ RSpec.feature 'RecipesController', type: :feature do
   scenario 'should display all recipes with name and description on index' do
     login_as(@user, scope: :user)
 
-    # Add recipes
     recipe1 = Recipe.create(name: 'Recipe 1', description: 'This is the first recipe.', user_id_id: @user.id)
     recipe2 = Recipe.create(name: 'Recipe 2', description: 'This is the second recipe.', user_id_id: @user.id)
     recipe3 = Recipe.create(name: 'Recipe 3', description: 'This is the third recipe.', user_id_id: @user.id)
 
-    # Visit index page
     visit recipes_path
 
-    # Ensure all recipes with name and description are displayed on the index page
     expect(page).to have_content(recipe1.name)
     expect(page).to have_content(recipe1.description)
 
