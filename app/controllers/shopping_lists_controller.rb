@@ -2,30 +2,14 @@ class ShoppingListsController < ApplicationController
   def index
     @foods = Food.where(user_id_id: current_user.id).order(created_at: :desc)
     @recipes = Recipe.where(user_id_id: current_user.id)
-    @recipess = []
-    @recipes.each do |recipe|
-      @recipess << recipe.recipe_foods
-    end
+    
+    array = @recipes.map { |recipe| recipe.recipe_foods.map { |food| {id: food.food_id_id, quantity: food.quantity} } }
+    @foody = array.flatten.map { |hash| { id: hash[:id], quantity: hash[:quantity] } }
 
-    @recipedfood = convert(@recipess)
     @genfood = converting(@foods)
-    result = @genfood.reject { |obj| @recipedfood.map { |o| o[:food_id_id] }.include?(obj[:id]) }
+    result = @genfood.reject { |obj| @foody.map { |o| o[:id] }.include?(obj[:id]) }
 
     @shoppings = result
-  end
-
-  def convert(foood)
-    foood.first.map do |recipe_food|
-      {
-        id: recipe_food.id,
-        quantity: recipe_food.quantity,
-        recipe_id_id: recipe_food.recipe_id_id,
-        food_id_id: recipe_food.food_id_id,
-        created_at: recipe_food.created_at,
-        updated_at: recipe_food.updated_at,
-        value: recipe_food.value
-      }
-    end
   end
 
   def converting(foood)
@@ -43,6 +27,3 @@ class ShoppingListsController < ApplicationController
     end
   end
 end
-
-#   recipe.recipe_foods do |recipe_food|
-# end
