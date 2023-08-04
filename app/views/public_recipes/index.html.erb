@@ -1,9 +1,10 @@
+
 <h1 class='text_center'>Public Recipes</h1>
+
 <div id="recipes">
   <% @public.each do |recipe| %>
     <%= link_to recipe_path(recipe) do %>
       <%= render partial: 'recipe', locals: { recipe: recipe } %>
     <% end %>
   <% end %>
-
 </div>
