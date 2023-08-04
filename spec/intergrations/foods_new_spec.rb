@@ -3,7 +3,7 @@ require 'faker'
 include Warden::Test::Helpers
 
 RSpec.feature 'Food show', type: :feature do
-    before(:each) do
+  before(:each) do
     @user = User.create!(name: Faker::Name.unique.name,
                          email: Faker::Internet.email,
                          password: '123456', password_confirmation: '123456')
