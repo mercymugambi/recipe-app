@@ -12,17 +12,20 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="form">
+
+  <div class="field">
     <%= form.label :food_id_id, 'Food Type', style: "display: block" %>
     <%= form.collection_select :food_id_id, @foods, :id, :name, prompt: 'Select Food Type' %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :quantity %>
     <%= form.number_field :quantity %>
   </div>
 
   <div>
     <%= form.submit %>
+  </div>
   </div>
 <% end %>
