@@ -17,7 +17,12 @@
         <td><%= recipe_food.food.name %></td>
         <td><%= recipe_food.quantity %></td>
         <td><%= recipe_food.value %></td>
-        <td></td>
+        <td>
+          <div class='recipe-actions'>
+            <%= link_to "Modify", edit_recipe_recipe_food_path(@recipe, recipe_food.id), class: 'modi' %>
+            <%= button_to "Remove", recipe_recipe_food_path(@recipe.id, recipe_food.id), :method => :delete, class: "out" %>
+          </div>
+        </td>
       </tr>
     <% end %>
   </tbody>
