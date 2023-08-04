@@ -34,11 +34,11 @@ gem 'jbuilder'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
-gem 'sqlite3', '~> 1.4'
-gem 'sass-rails', '>= 6'
-gem 'webpacker', '~> 5.0'
-gem 'turbolinks', '~> 5'
 gem 'bcrypt', '~> 3.1.7'
+gem 'sass-rails', '>= 6'
+gem 'sqlite3', '~> 1.4'
+gem 'turbolinks', '~> 5'
+gem 'webpacker', '~> 5.0'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -58,10 +58,10 @@ gem 'sassc-rails'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.2'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
   gem 'shoulda-matchers', '~> 5.3'
-  gem 'database_cleaner', '~> 2.0', '>= 2.0.2'
 end
 
 group :development do

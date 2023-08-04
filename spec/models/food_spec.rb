@@ -10,7 +10,7 @@ RSpec.describe Food, type: :model do
     end
 
     it 'should have Recipe belong to user' do
-        expect(@recipe.user).to eq(@user)
+      expect(@recipe.user).to eq(@user)
     end
 
     it 'should belong to a user' do
