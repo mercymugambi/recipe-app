@@ -5,7 +5,6 @@
 <div id="foods">
   <table class="the_table">
       <tr>
-        <th>ID.</th>
         <th>Name</th>
         <th>Unit</th>
         <th>Price</th>
@@ -18,10 +17,9 @@
       <% if food.user_id_id == current_user.id %>
       
         <tr>
-          <td><%= food.id %></th>
           <td><%= food.name %></td>
           <td><%= food.measurement_unit %></td>
-          <td><%= food.price %></td>
+          <td>$<%= food.price %></td>
           <td><%= food.quantity %></td>
           <td><%= link_to "Show this food", food %></td>
           <td><%= button_to "Destroy this food", food, method: :delete %></td>
