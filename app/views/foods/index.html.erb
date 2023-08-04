@@ -14,7 +14,7 @@
       </tr>
 
     <% @foods.each do |food| %>
-      <% if food.user_id_id == current_user.id %>
+      <% if current_user && food.user_id_id == current_user.id %>
       
         <tr>
           <td><%= food.name %></td>
