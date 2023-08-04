@@ -32,6 +32,7 @@ end
 
 require 'capybara/rspec'
 require 'capybara/dsl'
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{Rails.root}/spec/fixtures"
@@ -70,4 +71,5 @@ RSpec.configure do |config|
 
   # Configure Capybara to use RackTest driver (default driver)
   Capybara.default_driver = :rack_test
+
 end
