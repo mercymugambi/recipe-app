@@ -71,5 +71,4 @@ RSpec.configure do |config|
 
   # Configure Capybara to use RackTest driver (default driver)
   Capybara.default_driver = :rack_test
-
 end
