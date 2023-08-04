@@ -1,10 +1,10 @@
 class ShoppingListsController < ApplicationController
   def index
     @foods = Food.where(user_id_id: current_user.id).order(created_at: :desc)
-    @recipes = Recipe.where(user_id_id: current_user.id)
+    @recipes = Recipe.includes(:recipe_foods, :foods).where(user_id_id: current_user.id)
 
     array = @recipes.map do |recipe|
-      recipe.recipe_foods.map do |food|
+      recipe.recipe_foods.includes(:food).map do |food|
         { id: food.food_id_id, quantity: food.quantity }
       end
     end

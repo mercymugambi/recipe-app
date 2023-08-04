@@ -3,12 +3,12 @@ class RecipesController < ApplicationController
 
   # GET /recipes or /recipes.json
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.includes(:recipe_foods, :foods).all
   end
 
   # GET /recipes/1 or /recipes/1.json
   def show
-    @recipeshow = Recipe.find(params[:id])
+    @recipeshow = Recipe.includes(:recipe_foods, :foods).find(params[:id])
     # @recipe_food = @recipe.recipe_foods.find(params[:id])
   end
 
