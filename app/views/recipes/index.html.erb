@@ -1,0 +1,13 @@
+<div class = "recipe_container">
+<h1 class = "recipe-title">Recipes</h1>
+<button> <%= link_to "Add recipe", new_recipe_path %> </button>
+
+<div id="recipes">
+    <% @recipes.each do |recipe| %>
+      <% if current_user && recipe.user_id_id == current_user.id %>
+      <%= link_to recipe_path(recipe) do %>
+        <%= render partial: 'recipe', locals: { recipe: recipe, method: :delete } %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>

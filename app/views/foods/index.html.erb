@@ -1,0 +1,30 @@
+
+<h1 class='title'>Foods</h1>
+<%= render 'shared/button', btnName: 'New food', btnClass: 'btn btn_cta btn_cta_new btn_cta_new_right', btnPath: new_food_path %>
+
+<div id="foods">
+  <table class="the_table">
+      <tr>
+        <th>Name</th>
+        <th>Unit</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>View</th>
+        <th>Delete</th>
+      </tr>
+
+    <% @foods.each do |food| %>
+      <% if current_user && food.user_id_id == current_user.id %>
+      
+        <tr>
+          <td><%= food.name %></td>
+          <td><%= food.measurement_unit %></td>
+          <td>$<%= food.price %></td>
+          <td><%= food.quantity %></td>
+          <td><%= link_to "Show this food", food %></td>
+          <td><%= button_to "Destroy this food", food, method: :delete %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+</div>

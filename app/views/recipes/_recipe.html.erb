@@ -1,0 +1,18 @@
+<div id="<%= dom_id recipe %>" class="dom-recipe-class">
+<div class="recipe-display">
+<%= link_to recipe_path(recipe) do %>
+<p>
+  <strong><%= recipe.name %></strong>
+  </p>
+  <% end %>
+  <strong><%= button_to "REMOVE", recipe, method: :delete, class: "remove-btn" %></strong>
+  </div>
+  <div class="recipe-desc">
+  <%= link_to recipe_path(recipe) do %>
+      <p>
+        <strong>Description:</strong>
+        <%= recipe.description %>
+      </p>
+      <% end %>
+  </div>
+</div>
